@@ -1,0 +1,56 @@
+.intro {
+  height: 658px;
+  background: $background-gradient-desk;
+  padding: 51px 0;
+  color: $color-default-white;
+}
+
+.intro .container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.intro__wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 64px;
+}
+
+.intro p {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  margin-bottom: 25px;
+}
+
+.intro h1 {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 92px;
+  line-height: 110px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.intro__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  line-height: 21px;
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+.intro__link {
+  width: 230px;
+  min-height: 57px;
+  border: 4px solid $color-default-white;
+  color: $color-default-white;
+}
+

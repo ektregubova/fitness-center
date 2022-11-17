@@ -1,0 +1,84 @@
+.gym {
+  padding: 120px 0;
+}
+
+.gym .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gym__content {
+  width: 355px;
+  padding-top: 49px;
+}
+
+.gym h2 {
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.gym h3 {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+//.gym__descr {}
+
+.gym p {
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+//.gym__img {}
+
+.gym__video {
+  width: 364px;
+  height: 228px;
+  margin-top: -113px;
+  margin-left: -63px;
+  position: relative;
+}
+
+.gym__iframe {
+  width: 364px;
+  height: 228px;
+}
+
+//.gym__img-poster {}
+
+.gym__video-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.gym__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: url("../../img/svg/video-button.svg") no-repeat center;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+  }
+}

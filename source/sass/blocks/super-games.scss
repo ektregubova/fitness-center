@@ -1,0 +1,75 @@
+.super-games {
+  padding-top: 120px;
+  padding-bottom: 106px;
+}
+
+.super-games .container {
+  display: flex;
+}
+
+.super-games__content {
+  background-color: #ed0233;
+  color: $color-default-white;
+  padding: 87px 78px;
+}
+
+.super-games__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.super-games__time {
+  display: flex;
+  flex-direction: column;
+}
+
+.super-games h2 {
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 82px;
+  line-height: 79px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.super-games p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.super-games span {
+  font-size: 18px;
+  line-height: 27px;
+  border-bottom: 1px solid $color-default-white;
+  padding-bottom: 13px;
+}
+
+.super-games time {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.super-games b {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  padding-right: 7px;
+}
+
+.super-games__link {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  width: 343px;
+  min-height: 67px;
+  border: 4px solid $color-default-white;
+}
