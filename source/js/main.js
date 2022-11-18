@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {addIframe} from './modules/iframe';
 import {addClickOnButtonSubscr} from './modules/subscription';
-import {addCoachSwiper} from './vendor';
+import {addCoachSwiper, addReviewsSwiper} from './vendor';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -11,11 +11,13 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  addCoachSwiper();
+
   // Modules
   // ---------------------------------
   addIframe();
   addClickOnButtonSubscr();
+  addCoachSwiper();
+  addReviewsSwiper();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

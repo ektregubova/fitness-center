@@ -1,6 +1,10 @@
 .coaches {
   padding-bottom: 91px;
   color: $color-default-white;
+
+  @include vp-1199 {
+    padding-bottom: 100px;
+  }
 }
 
 .coaches h2 {
@@ -12,14 +16,29 @@
   letter-spacing: 0.03em;
   margin: 0;
   margin-bottom: 48px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-bottom: 31px;
+    text-align: center;
+  }
 }
 
-//.container {}
+.coaches__wrapper {
+  position: relative;
 
-//.coaches__wrapper {}
+  @include vp-1199 {
+    width: 566px;
+    margin: 0 auto;
+  }
+}
 
-//.coaches__slide {}
-
+.coaches__swiper {
+  @include vp-1199 {
+    width: 566px;
+  }
+}
 
 .coaches__slide-wrapper {
   position: relative;
@@ -46,13 +65,11 @@
       opacity: 0;
     }
   }
+
+  @include vp-1199 {
+    width: 268px;
+  }
 }
-
-
-//.coaches__slide-img {
-//  transition: opacity $trans-default;
-//}
-
 
 .coaches__slide-wrapper h3 {
   position: absolute;
@@ -75,10 +92,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(16, 38, 84, 0.89);
-  padding-top: 58px;
+  padding-top: 40px;
   padding-left: 58px;
   padding-bottom: 58px;
-  padding-right: 40px;
+  padding-right: 39px;
   transition: opacity $trans-default;
   overflow: auto;
 }
@@ -103,4 +120,34 @@
 
 .coaches__skills-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.coaches__button {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+  display: block;
+  cursor: pointer;
+  border: none;
+  width: 16px;
+  height: 32px;
+  background: url("../img/svg/arrow.svg") no-repeat center;
+
+  &--next {
+    transform: rotate(180deg);
+    right: -40px;
+
+    @include vp-1199 {
+      //right: 250px;
+    }
+  }
+
+  &--prev {
+    left: -40px;
+
+    @include vp-1199 {
+      //left: 250px;
+    }
+  }
 }

@@ -2,11 +2,31 @@
   position: absolute;
   padding: 30px 0;
   width: 100%;
+
+  @include vp-1199 {
+    padding: 40px 0;
+  }
+
+  @include vp-767 {
+    padding: 15px 0;
+  }
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
+}
+
+.header__logo {
+  @include vp-1199 {
+    width: 82px;
+    height: 17px;
+  }
+
+  @include vp-767 {
+    width: 69px;
+    height: 24px;
+  }
 }
 
 .header__tel {
@@ -16,4 +36,14 @@
   line-height: 31px;
   letter-spacing: 0.03em;
   color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

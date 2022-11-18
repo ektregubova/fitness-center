@@ -1,0 +1,35 @@
+.contacts-form {
+  background: linear-gradient(to right, $color-text 50%, $color-default-white 50%);
+  padding-top: 56px;
+  padding-bottom: 70px;
+  border-top: 1px solid $color-contacts;
+  border-image: linear-gradient(to right, transparent 50%, $color-contacts 50%);
+  border-image-slice: 1;
+
+  @include vp-1199 {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+}
+
+.contacts-form__wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.contacts-form__item {
+  width: 50%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
