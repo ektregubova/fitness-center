@@ -1,12 +1,25 @@
 .footer {
   min-height: 108px;
-  background: $color-bg-footer;
+  background-color: $color-bg-dark;
   padding: 42px 0;
+
+  @include vp-1199 {
+    min-height: 114px;
+  }
+
+  @include vp-767 {
+    min-height: 260px;
+    padding: 50px 0;
+  }
 }
 
 .footer .container {
   display: flex;
   justify-content: space-between;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .footer__logo {
@@ -15,6 +28,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 237px;
+
+  @include vp-1199 {
+    margin-right: 20px;
+  }
 }
 
 .footer__nav-list {
@@ -23,6 +41,15 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 71px;
+    row-gap: 15px;
+    margin-bottom: 35px;
+  }
 }
 
 .footer__nav-item {
@@ -31,12 +58,42 @@
   @include vp-1199 {
     margin-right: 30px;
   }
+
+  @include vp-767 {
+    margin: 0;
+
+    &--logo {
+      order: -4;
+    }
+
+    &--services {
+      order: -2;
+    }
+
+    &--stocks {
+      order: -3;
+    }
+
+    &--coaches {
+      order: -1;
+    }
+  }
 }
 
 .footer__nav-link {
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+
+  @include hover-focus {
+    text-decoration: underline $color-default-white;
+    outline: none;
+  }
+
+  @include active {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+  }
 }
 
 .footer__social-list {
@@ -45,14 +102,26 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  width: 120px;
 }
 
 .footer__social-item {
   margin-right: 11px;
+  margin-bottom: 10px;
 }
 
 .footer__social-link {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include hover-focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 1px;
+  }
+
+  @include active {
+    outline: 1px solid $color-default-white;
+    outline-offset: 2px;
+  }
 }

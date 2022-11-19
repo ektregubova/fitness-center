@@ -4,6 +4,10 @@
   @include vp-1199 {
     padding-top: 100px;
   }
+
+  @include vp-767 {
+    padding-top: 70px;
+  }
 }
 
 .stocks h2 {
@@ -20,29 +24,47 @@
     font-size: 42px;
     line-height: 50px;
   }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 50px;
+  }
 }
 
 .stocks__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "general ordinary-1"
-    "general ordinary-2";
+  grid-template-rows: repeat(2, 1fr);
   gap: 40px;
 
   @include vp-1199 {
-    grid-template-areas:
-      "general general"
-      "ordinary-1 ordinary-2";
+    grid-template-rows: minmax(462px, min-content) minmax(211px, min-content);
     gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .stocks__general {
-  grid-area: general;
+  grid-row: 1/3;
   color: $color-default-white;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include vp-1199 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    grid-template-columns: minmax(40%, mincontent) 60%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .stocks__general-content {
@@ -50,14 +72,25 @@
   padding: 45px;
   display: flex;
   flex-direction: column;
+
+  @include vp-767 {
+    align-items: center;
+  }
 }
 
 .stocks__general-image {
+  background-color: $color-text-light;
   max-width: 280px;
 
   @include vp-1199 {
-    max-width: 399px;
+    min-width: 399px;
     max-height: 462px;
+    max-width: 100%;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    max-height: 299px;
   }
 }
 
@@ -66,8 +99,8 @@
   width: 100%;
   height: 100%;
 
-  @include vp-1199 {
-    width: 399px;
+  @include vp-767 {
+    max-height: 299px;
   }
 }
 
@@ -103,6 +136,16 @@
   color: $color-default-white;
   border-bottom: 1px solid $color-default-white;
   margin-top: auto;
+  user-select: none;
+
+  @include hover-focus {
+    outline: none;
+    border-bottom: 1px solid $color-text;
+  }
+
+  @include active {
+    color: $color-text;
+  }
 }
 
 .stocks__ordinary-item {
@@ -113,14 +156,6 @@
   color: $color-spec;
   display: flex;
   flex-direction: column;
-
-  &--first {
-    grid-area: ordinary-1;
-  }
-
-  &--second {
-    grid-area: ordinary-2;
-  }
 
   @include vp-1199 {
     min-height: 211px;
@@ -148,6 +183,16 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-spec;
+  user-select: none;
   border-bottom: 1px solid $color-spec;
   margin-top: auto;
+
+  @include hover-focus {
+    border-bottom: 1px solid $color-stock-gen;
+    outline: none;
+  }
+
+  @include active {
+    color: $color-stock-gen;
+  }
 }

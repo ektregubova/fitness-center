@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {addIframe} from './modules/iframe';
 import {addClickOnButtonSubscr} from './modules/subscription';
 import {addCoachSwiper, addReviewsSwiper} from './vendor';
+import {validateForm} from './modules/form-validation';
+import {onLinkMove} from './modules/anchor';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +20,8 @@ window.addEventListener('DOMContentLoaded', () => {
   addClickOnButtonSubscr();
   addCoachSwiper();
   addReviewsSwiper();
+  validateForm();
+  onLinkMove();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

@@ -1,5 +1,9 @@
 const subscrButtons = document.querySelectorAll('[data-sub-button]');
-const subContent = document.querySelectorAll('[data-sub-tab]');
+const subContents = document.querySelectorAll('[data-sub-tab]');
+
+subContents.forEach((elem) => {
+  elem.classList.remove('is-nojs');
+});
 
 function addClickOnButtonSubscr() {
   subscrButtons.forEach((button) => {
@@ -17,7 +21,7 @@ function addClickOnButtonSubscr() {
           elem.classList.remove('is-active');
         });
 
-        subContent.forEach((el) => {
+        subContents.forEach((el) => {
           el.classList.remove('is-active');
         });
 

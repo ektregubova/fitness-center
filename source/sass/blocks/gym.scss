@@ -38,6 +38,10 @@
     max-width: 502px;
     align-items: center;
   }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
 }
 
 .gym h2 {
@@ -111,6 +115,7 @@
 
   @include vp-767 {
     max-height: 520px;
+    max-width: 100%;
   }
 }
 
@@ -144,7 +149,6 @@
 
   @include vp-767 {
     margin-top: 40px;
-    width: 100%;
   }
 }
 
@@ -185,5 +189,21 @@
     top: 100%;
     width: 73px;
     height: 73px;
+  }
+
+  @include vp-767 {
+    top: 50%;
+  }
+
+  @include hover-focus {
+    outline: none;
+    border: 2px solid $color-text;
+    border-radius: 50%;
+  }
+
+  @include active {
+    outline: none;
+    border: 2px solid $color-text;
+    border-radius: 50%;
   }
 }

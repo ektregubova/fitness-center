@@ -72,20 +72,8 @@
   cursor: pointer;
   position: relative;
   padding: 0;
+  user-select: none;
   color: rgba($color: $color-text, $alpha : 0.5);
-
-  &.is-active {
-    color: $color-text;
-  }
-
-  &.is-active::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 2px;
-    bottom: -2px;
-    background-color: #d10a42;
-  }
 
   @include vp-1199 {
     font-size: 18px;
@@ -96,14 +84,41 @@
     font-size: 16px;
     line-height: 24px;
   }
+
+  @include hover-focus {
+    color: $color-btn;
+    outline: none;
+  }
+
+  @include active {
+    border: 2px solid $color-btn;
+  }
 }
 
-.subscription__subcontent {
-  display: none;
+.subscription__nav-button[data-sub-button].is-active {
+  color: $color-text;
 }
 
-.subscription__subcontent.is-active {
+.subscription__nav-button[data-sub-button].is-active::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  background-color: $color-btn;
+}
+
+.subscription__subcontent[data-sub-tab].is-active {
   display: block;
+}
+
+[data-sub-tab].is-nojs {
+  display: block;
+  margin-bottom: 30px;
+}
+
+[data-sub-tab]:not(.is-nojs) {
+  display: none;
 }
 
 .subscription__list {
@@ -231,4 +246,17 @@
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  user-select: none;
+  margin-top: auto;
+
+  @include hover-focus {
+    border: 7px solid #d10a42;
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 1;
+    outline: none;
+  }
+
+  @include active {
+    border: 7px solid $color-btn;
+  }
 }

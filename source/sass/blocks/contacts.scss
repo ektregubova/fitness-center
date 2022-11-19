@@ -8,6 +8,10 @@
     padding-top: 70px;
     padding-bottom: 70px;
   }
+
+  @include vp-767 {
+    padding: 70px 15px;
+  }
 }
 
 .contacts__wrapper {
@@ -23,7 +27,7 @@
     position: absolute;
     width: 102px;
     height: 1px;
-    background-color: #74819c;
+    background-color: $color-contacts;
     transform: rotate(90deg);
     top: 80px;
     left: 40%;
@@ -31,11 +35,19 @@
     @include vp-1199 {
       left: 38%;
     }
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   @include vp-1199 {
     column-gap: 96px;
     row-gap: 35px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -53,6 +65,11 @@
     font-size: 42px;
     line-height: 50px;
     margin-bottom: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
   }
 }
 
@@ -84,4 +101,14 @@
 
 .contacts a {
   color: $color-text;
+
+  @include hover-focus {
+    text-decoration: underline $color-text;
+    outline: none;
+  }
+
+  @include active {
+    outline: 2px solid $color-text;
+    outline-offset: 2px;
+  }
 }

@@ -4,15 +4,23 @@
   @include vp-1199 {
     padding: 100px 0;
   }
+
+  @include vp-767 {
+    padding: 70px 0;
+  }
 }
 
 .reviews__wrapper {
   position: relative;
-  width: 560px;
+  max-width: 560px;
   margin: 0 auto;
 
   @include vp-1199 {
-    width: 566px;
+    max-width: 566px;
+  }
+
+  @include vp-767 {
+    width: 226px;
   }
 }
 
@@ -31,16 +39,32 @@
     line-height: 50px;
     margin-bottom: 50px;
   }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 .reviews__slide {
-  background: $color-spec;
+  background-color: $color-spec;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   color: $color-default-white;
   margin: 0;
   padding: 60px;
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 30px 1fr;
+  column-gap: 28px;
+  row-gap: 25px;
+
+  @include vp-767 {
+    padding: 40px 25px;
+    grid-template-columns: 68px 1fr;
+    grid-template-rows: minmax(68px, auto) 1fr;
+    row-gap: 20px;
+    column-gap: 15px;
+  }
 }
 
 .reviews__slide cite {
@@ -48,16 +72,35 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
+
+  @include vp-767 {
+    line-height: 26px;
+  }
 }
 
 .reviews__slide p {
   line-height: 22px;
   margin: 0;
+  grid-column: 2/3;
+  grid-row: 2/3;
+
+  @include vp-767 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
 }
 
 .reviews__slide-img {
   border-radius: 50%;
-  margin-right: 28px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+
+  @include vp-767 {
+    width: 68px;
+    height: 68px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 
 .reviews__button {
@@ -68,9 +111,14 @@
   display: block;
   cursor: pointer;
   border: none;
-  width: 16px;
-  height: 32px;
-  background: url("../img/svg/arrow.svg") no-repeat center;
+  width: 18px;
+  height: 34px;
+  background-color: transparent;
+
+  svg {
+    fill: none;
+    stroke: #afafaf;
+  }
 
   &--next {
     transform: rotate(180deg);
@@ -83,5 +131,19 @@
 
   &.swiper-button-disabled {
     display: none;
+  }
+
+  @include hover-focus {
+    outline: none;
+
+    svg {
+      stroke: $color-btn;
+    }
+  }
+
+  @include active {
+    svg {
+      stroke: $color-btn;
+    }
   }
 }

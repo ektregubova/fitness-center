@@ -21,7 +21,7 @@
 }
 
 .super-games__content {
-  background-color: #ed0233;
+  background-color: $color-stock-gen;
   color: $color-default-white;
   padding: 87px 78px;
 
@@ -131,6 +131,7 @@
   color: $color-default-white;
   width: 343px;
   min-height: 67px;
+  user-select: none;
   border: 4px solid $color-default-white;
 
   @include vp-1199 {
@@ -142,6 +143,15 @@
 
   @include vp-767 {
     width: 100%;
+  }
+
+  @include hover-focus {
+    border: 4px solid $color-text;
+    outline: none;
+  }
+
+  @include active {
+    color: $color-text;
   }
 }
 
