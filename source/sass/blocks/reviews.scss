@@ -2,7 +2,8 @@
   padding: 120px 0;
 
   @include vp-1199 {
-    padding: 100px 0;
+    padding-top: 91px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
@@ -31,13 +32,15 @@
   line-height: 65px;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 34px;
+  margin-left: 9px;
   text-align: center;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
+    margin-left: -5px;
   }
 
   @include vp-767 {
@@ -51,12 +54,12 @@
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   color: $color-default-white;
   margin: 0;
-  padding: 60px;
+  padding: 62px 62px 57px;
   display: grid;
   grid-template-columns: 80px 1fr;
-  grid-template-rows: 30px 1fr;
+  grid-template-rows: 20px 1fr;
   column-gap: 28px;
-  row-gap: 25px;
+  row-gap: 15px;
 
   @include vp-767 {
     padding: 40px 25px;
@@ -71,7 +74,8 @@
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 30px;
+  line-height: 18px;
+  margin-top: -2px;
 
   @include vp-767 {
     line-height: 26px;
@@ -105,8 +109,8 @@
 
 .reviews__button {
   position: absolute;
-  top: 50%;
-  transform: translate(-50%);
+  top: 43%;
+  transform: translate(-57%);
   z-index: 1;
   display: block;
   cursor: pointer;
@@ -122,11 +126,11 @@
 
   &--next {
     transform: rotate(180deg);
-    right: -40px;
+    right: -64px;
   }
 
   &--prev {
-    left: -40px;
+    left: -53px;
   }
 
   &.swiper-button-disabled {
@@ -144,6 +148,16 @@
   @include active {
     svg {
       stroke: $color-btn;
+    }
+  }
+
+  @include vp-767 {
+    &--next {
+      right: -20px;
+    }
+
+    &--prev {
+      left: -53px;
     }
   }
 }

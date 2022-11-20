@@ -15,7 +15,13 @@
 .subscription__img {
   position: absolute;
   right: 0;
-  bottom: -160px;
+  bottom: -150px;
+
+  @include vp-1199 {
+    width: 347px;
+    height: 446px;
+    bottom: -126px;
+  }
 }
 
 .subscription .container {
@@ -32,11 +38,13 @@
   line-height: 65px;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    margin-left: -13px;
+    margin-bottom: 21px;
   }
 
   @include vp-767 {
@@ -49,9 +57,10 @@
 .subscription__nav {
   display: flex;
   justify-content: space-between;
-  width: 341px;
+  width: 342px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
-  margin-bottom: 39px;
+  margin-bottom: 38px;
+  padding-bottom: 11px;
 
   @include vp-1199 {
     width: 332px;
@@ -104,7 +113,7 @@
   content: "";
   width: 100%;
   height: 2px;
-  bottom: -2px;
+  bottom: -13px;
   background-color: $color-btn;
 }
 
@@ -142,7 +151,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 61px 70px;
+  padding: 61px 69px 60px;
   background-color: $color-default-white;
   cursor: pointer;
   border: 7px solid transparent;
@@ -160,7 +169,7 @@
   }
 
   @include vp-1199 {
-    padding: 61px 111px;
+    padding: 60px 110px 61px;
   }
 
   @include vp-767 {
@@ -171,9 +180,9 @@
 .subscription h3 {
   font-weight: 700;
   font-size: 26px;
-  line-height: 29px;
+  line-height: 20px;
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 
   @include vp-767 {
     font-size: 22px;
@@ -186,7 +195,7 @@
   font-weight: 400;
   color: $color-text-subscr;
   margin: 0;
-  margin-bottom: 59px;
+  margin-bottom: 82px;
 
   @include vp-767 {
     margin-bottom: 50px;
@@ -194,7 +203,7 @@
 }
 
 .subscription__price {
-  margin-bottom: 59px;
+  margin-bottom: 58px;
   position: relative;
 
   @include vp-767 {
@@ -218,7 +227,7 @@
 
 .subscription b {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: -19px;
   font-weight: 700;
   font-size: 100px;
@@ -235,11 +244,13 @@
 .subscription span {
   font-family: $ff-rouble;
   color: $color-text;
+  margin-left: 13px;
+  margin-right: -2px;
 }
 
 .subscription__link {
-  width: 206px;
-  min-height: 64px;
+  width: 208px;
+  min-height: 66px;
   border: 2px solid $color-text;
   font-weight: 700;
   font-size: 12px;

@@ -24,7 +24,7 @@
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
     text-align: center;
   }
 
@@ -87,16 +87,17 @@
 
 .coaches__slide h3 {
   position: absolute;
-  bottom: 30px;
-  left: 78px;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
   margin: 0;
 
-  @include vp-1199 {
-    left: 70px;
-  }
+  //@include vp-1199 {
+  //  left: 70px;
+  //}
 
   @include vp-767 {
     left: 55px;
@@ -120,9 +121,9 @@
   width: 100%;
   height: 100%;
   background-color: rgba(16, 38, 84, 0.89);
-  padding-top: 40px;
-  padding-left: 58px;
-  padding-bottom: 58px;
+  padding-top: 52px;
+  padding-left: 54px;
+  padding-bottom: 52px;
   padding-right: 39px;
   transition: opacity $trans-default;
   overflow: auto;
@@ -135,6 +136,18 @@
   }
 }
 
+.coaches__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 15px;
+
+  @include vp-1199 {
+    margin-right: 22px;
+  }
+}
+
 .coaches__slide p {
   font-weight: 700;
   font-size: 18px;
@@ -143,6 +156,7 @@
 }
 
 .coaches__slide span {
+  line-height: 17px;
   color: $color-text-skill;
 }
 
@@ -151,10 +165,28 @@
   padding: 0;
   font-size: 14px;
   line-height: 21px;
+  list-style: none;
 }
 
-.coaches__skills-item:not(:last-child) {
-  margin-bottom: 20px;
+.coaches__skills-item {
+  margin-bottom: 13px;
+  padding-left: 17px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    left: 1px;
+    top: 7px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .coaches__button {
@@ -178,18 +210,10 @@
   &--next {
     transform: rotate(180deg);
     right: -40px;
-
-    @include vp-1199 {
-      //right: 250px;
-    }
   }
 
   &--prev {
     left: -40px;
-
-    @include vp-1199 {
-      //left: 250px;
-    }
   }
 
   @include hover-focus {
@@ -203,6 +227,28 @@
   @include active {
     svg {
       stroke: $color-btn;
+    }
+  }
+
+  @include vp-1199 {
+    &--prev {
+      left: -47px;
+      top: 44%;
+    }
+
+    &--next {
+      right: -56px;
+      top: 44%;
+    }
+  }
+
+  @include vp-767 {
+    &--next {
+      right: -20px;
+    }
+
+    &--prev {
+      left: -53px;
     }
   }
 }

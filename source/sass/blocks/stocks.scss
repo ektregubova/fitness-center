@@ -2,7 +2,7 @@
   padding-top: 149px;
 
   @include vp-1199 {
-    padding-top: 100px;
+    padding-top: 93px;
   }
 
   @include vp-767 {
@@ -23,6 +23,8 @@
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
+    margin-bottom: 39px;
+    margin-left: -8px;
   }
 
   @include vp-767 {
@@ -35,8 +37,9 @@
 .stocks__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(211px, min-content));
   gap: 40px;
+  grid-auto-flow: row dense;
 
   @include vp-1199 {
     grid-template-rows: minmax(462px, min-content) minmax(211px, min-content);
@@ -54,14 +57,16 @@
   color: $color-default-white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  min-width: 560px;
 
   @include vp-1199 {
     grid-column: 1/3;
     grid-row: 1/2;
-    grid-template-columns: minmax(40%, mincontent) 60%;
+    grid-template-columns: 1fr auto;
   }
 
   @include vp-767 {
+    min-width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -69,7 +74,7 @@
 
 .stocks__general-content {
   background-color: $color-stock-gen;
-  padding: 45px;
+  padding: 33px 45px 45px;
   display: flex;
   flex-direction: column;
 
@@ -80,7 +85,6 @@
 
 .stocks__general-image {
   background-color: $color-text-light;
-  max-width: 280px;
 
   @include vp-1199 {
     min-width: 399px;
@@ -109,14 +113,14 @@
   font-size: 28px;
   line-height: 44px;
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 5px;
 }
 
 .stocks__general span {
   font-weight: 700;
   font-size: 70px;
   line-height: 50px;
-  margin-bottom: 35px;
+  margin-bottom: 29px;
 }
 
 .stocks__general p {
@@ -149,24 +153,20 @@
 }
 
 .stocks__ordinary-item {
-  padding: 28px;
+  padding: 25px 28px 28px;
   border: 7px solid #d10a42;
   border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 1;
   color: $color-spec;
   display: flex;
   flex-direction: column;
-
-  @include vp-1199 {
-    min-height: 211px;
-  }
 }
 
 .stocks__ordinary-item h3 {
   font-weight: 700;
   font-size: 26px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .stocks__ordinary-item p {

@@ -10,6 +10,8 @@
   <link rel="preload" href="fonts/AlumniSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/BebasNeue-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/BebasNeue-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Roboto-Condensed.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -30,16 +32,16 @@
       <section class="intro">
         <div class="container">
           <div class="intro__wrapper">
-            <ul class="intro__list">
-              <li class="intro__item">Тренажёрный зал</li>
-              <li class="intro__item">Групповые занятия</li>
-              <li class="intro__item">Кардио-зона</li>
-            </ul>
-            <div class="intro__content">
-              <p>омск</p>
+            <p>омск</p>
+            <div class="intro__info">
+              <ul class="intro__list">
+                <li class="intro__item">Тренажёрный зал</li>
+                <li class="intro__item">Групповые занятия</li>
+                <li class="intro__item">Кардио-зона</li>
+              </ul>
               <h1>Фитнес<br>центр</h1>
-              <a class="intro__link btn" href="#subscription" data-anchor>Купить абонемент</a>
             </div>
+            <a class="intro__link btn" href="#subscription" data-anchor>Купить абонемент</a>
           </div>
           <div class="intro__image">
             <picture>
@@ -67,11 +69,13 @@
             </div>
           </div>
           <div class="gym__media">
-            <picture>
-              <source type="image/webp" srcset="img/photo-gym.webp, img/photo-gym@2x.webp 2x">
-              <img class="gym__img" src="img/photo-gym.jpg" srcset="img/photo-gym@2x.jpg 2x" width="660" height="401"
-                alt="Фото тренажерного зала.">
-            </picture>
+            <div class="gym__media-img">
+              <picture>
+                <source type="image/webp" srcset="img/photo-gym.webp, img/photo-gym@2x.webp 2x">
+                <img class="gym__img" src="img/photo-gym.jpg" srcset="img/photo-gym@2x.jpg 2x" width="660" height="401"
+                  alt="Фото тренажерного зала.">
+              </picture>
+            </div>
             <div class="gym__video" data-video data-url="9TZXsZItgdw">
               <picture>
                 <source type="image/webp" srcset="img/video.webp, img/video@2x.webp 2x">
@@ -87,7 +91,7 @@
       <section class="subscription" id="subscription">
         <picture>
           <source type="image/webp" srcset="img/discs.webp, img/discs@2x.webp 2x">
-          <img class="subscription__img" src="img/discs.png" srcset="img/discs@2x.png 2x" width="321" height="384"
+          <img class="subscription__img" src="img/discs.png" srcset="img/discs@2x.png 2x" width="287" height="346"
             alt="2 красных блина к штанге массой 35 фунтов.">
         </picture>
         <div class="container">
@@ -202,14 +206,19 @@
       </section>
       <section class="super-games">
         <div class="container">
+
           <div class="super-games__content">
             <div class="super-games__info">
               <h2>super<br>games</h2>
-              <div class="super-games__time">
-                <span>Дата</span>
-                <time datetime="2019-03-07"><b>7</b>Марта<br>2019</time>
-                <span>Время</span>
-                <time datetime="2019-03-07T12:00"><b>12:00</b></time>
+              <div class="super-games__date">
+                <div class="super-games__day">
+                  <span>Дата</span>
+                  <time datetime="2019-03-07"><b>7</b>Марта<br>2019</time>
+                </div>
+                <div class="super-games__time">
+                  <span>Время</span>
+                  <time datetime="2019-03-07T12:00"><b>12:00</b></time>
+                </div>
               </div>
             </div>
             <p>Ежегодные соревнования по CrossFit</p>
@@ -222,7 +231,7 @@
                 width="660" height="500" alt="Спортсмен взбивающий спортивную магнезию.">
             </picture>
           </div>
-        </div>
+
       </section>
       <section class="coaches">
         <div class="container">
@@ -248,8 +257,10 @@
                       width="260" height="294" alt="Фото тренера Анны Павловой.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Анна Павлова</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Анна Павлова</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -265,8 +276,10 @@
                       width="260" height="294" alt="Фото тренера Алексея Лаврова.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Алексей Лавров</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Алексей Лавров</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -274,7 +287,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" tabindex="0">
+                <div class="coaches__slide swiper-slide coaches__slide--alexsandr" tabindex="0">
                   <h3>Александр Пашков</h3>
                   <picture>
                     <source type="image/webp" srcset="img/photo-alexsandr.webp, img/photo-alexsandr@2x.webp 2x">
@@ -282,8 +295,10 @@
                       width="260" height="294" alt="Фото тренера Александра Пашкова.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Александр Пашков</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Александр Пашков</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -291,7 +306,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" tabindex="0">
+                <div class="coaches__slide swiper-slide coaches__slide--mary" tabindex="0">
                   <h3>Мария Кетова</h3>
                   <picture>
                     <source type="image/webp" srcset="img/photo-mary.webp, img/photo-mary@2x.webp 2x">
@@ -299,8 +314,10 @@
                       width="260" height="294" alt="Фото тренера Марии Кетовой.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Мария Кетова</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Мария Кетова</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -316,8 +333,10 @@
                       width="260" height="294" alt="Фото тренера Анны Павловой.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Анна Павлова</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Анна Павлова</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -333,8 +352,10 @@
                       width="260" height="294" alt="Фото тренера Алексея Лаврова.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Алексей Лавров</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Алексей Лавров</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -350,8 +371,10 @@
                       width="260" height="294" alt="Фото тренера Александра Пашкова.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Александр Пашков</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Александр Пашков</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -367,8 +390,10 @@
                       width="260" height="294" alt="Фото тренера Марии Кетовой.">
                   </picture>
                   <div class="coaches__slide-info">
-                    <p>Мария Кетова</p>
-                    <span>CrossFit</span>
+                    <div class="coaches__name">
+                      <p>Мария Кетова</p>
+                      <span>CrossFit</span>
+                    </div>
                     <ul class="coaches__skills-list">
                       <li class="coaches__skills-item">Certified Level&nbsp;3 Trainer</li>
                       <li class="coaches__skills-item">Победитель чемпионата России по&nbsp;CrossFit</li>
@@ -450,13 +475,13 @@
                 <picture>
                   <source type="image/webp" srcset="img/stock-general.webp, img/stock-general@2x.webp 2x">
                   <img class="stocks__general-img" src="img/stock-general.jpg" srcset="img/stock-general@2x.jpg"
-                    width="399" height="462" alt="Улыбающаяся девушка в спортивной одежде.">
+                    width="280" height="462" alt="Улыбающаяся девушка в спортивной одежде.">
                 </picture>
               </div>
             </div>
             <div class="stocks__ordinary-item stocks__ordinary-item--first">
               <h3>Месяц бесплатно</h3>
-              <p>Приведи друга, получи абонемент в&nbsp;подарок</p>
+              <p>Приведи друга, получи абонемент&nbsp;в&nbsp;подарок</p>
               <a class="stocks__ordinary-link" href="#">подробнее</a>
             </div>
             <div class="stocks__ordinary-item stocks__ordinary-item--second">
@@ -524,9 +549,9 @@
           </div>
         </div>
       </section>
-      <div class="contacts-form">
+      <section class="contacts-form">
         <div class="contacts-form__wrapper">
-          <section class="contacts-form__item free-lesson">
+          <div class="contacts-form__item free-lesson">
             <h2>Бесплатное занятие</h2>
             <form class="free-lesson__form" action="https://echo.htmlacademy.ru/" method="post" data-form>
               <label>
@@ -540,30 +565,30 @@
               </label>
               <button class="free-lesson__button btn" type="submit" data-form-button>отправить</button>
             </form>
-          </section>
-          <section class="contacts-form__item contacts">
+          </div>
+          <div class="contacts-form__item contacts">
             <h2>Контакты</h2>
             <div class="contacts__wrapper">
-              <div class="contacts__content">
+              <div class="contacts__content contacts__content--address">
                 <p>Адрес:</p>
                 <address>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</address>
               </div>
-              <div class="contacts__content">
-                <p>График работы:</p>
-                <span>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</span>
-              </div>
-              <div class="contacts__content">
+              <div class="contacts__content contacts__content--tel">
                 <p>Телефон:</p>
                 <a href="tel:+88005555555">8-800-555-55-55</a>
               </div>
-              <div class="contacts__content">
+              <div class="contacts__content contacts__content--schedule">
+                <p>График работы:</p>
+                <span>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</span>
+              </div>
+              <div class="contacts__content contacts__content--mail">
                 <p>Email:</p>
                 <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
               </div>
             </div>
-          </section>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
