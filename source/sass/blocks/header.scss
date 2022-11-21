@@ -16,6 +16,7 @@
 
 .header__logo {
   padding-top: 10px;
+  margin-right: 10px;
 
   @include vp-1199 {
     width: 82px;
@@ -45,6 +46,7 @@
   @include vp-767 {
     font-size: 20px;
     line-height: 24px;
+    padding-top: 7px;
   }
 
   @include hover-focus {
@@ -55,5 +57,9 @@
   @include active {
     outline: 2px solid $color-text;
     outline-offset: 2px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
   }
 }

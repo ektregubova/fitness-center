@@ -10,7 +10,7 @@
   }
 
   @include vp-767 {
-    padding: 70px 15px;
+    padding: 64px 15px 63px;
   }
 }
 
@@ -72,6 +72,7 @@
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
+    margin-bottom: 34px;
   }
 }
 
@@ -100,9 +101,21 @@
       margin-left: 18px;
     }
   }
+
+  @include vp-767 {
+    margin-left: 0;
+
+    &--tel {
+      order: 1;
+    }
+
+    &--mail {
+      order: 2;
+    }
+  }
 }
 
-.contacts p {
+.contacts__content p {
   font-weight: 700;
   line-height: 12px;
   margin: 0;
@@ -115,11 +128,10 @@
   }
 }
 
-.contacts address,
-.contacts span,
-.contacts a {
+.contacts__content address,
+.contacts__content span,
+.contacts__content a {
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 10px;
 
@@ -129,7 +141,7 @@
   }
 }
 
-.contacts a {
+.contacts__content a {
   color: $color-text;
 
   @include hover-focus {

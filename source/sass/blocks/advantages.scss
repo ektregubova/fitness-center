@@ -2,7 +2,7 @@
   background: linear-gradient(to right, $color-default-white 2.5%, $color-bg 2.5%);
 
   @include vp-1199 {
-    background-color: $color-bg;
+    background: $color-bg;
   }
 }
 
@@ -16,7 +16,7 @@
   }
 
   @include vp-767 {
-    padding: 70px 0;
+    padding: 65px 0 62px;
   }
 }
 
@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 0;
   }
 }
 
@@ -64,7 +65,8 @@
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 60px;
+    margin-bottom: 47px;
+    margin-left: -17px;
   }
 }
 
@@ -72,10 +74,11 @@
   display: flex;
   justify-content: space-between;
   width: 340px;
+  min-height: 157px;
 
   &--first {
     padding-left: 19px;
-    border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+    border-bottom: 2px solid $color-adv-item;
     align-items: flex-start;
 
     @include vp-1199 {
@@ -84,7 +87,7 @@
   }
 
   &--second {
-    border-bottom: 2px solid rgba(209, 10, 66, 0.2);
+    border-bottom: 2px solid $color-adv-item;
     align-items: flex-start;
     margin-left: auto;
   }
@@ -103,18 +106,23 @@
   }
 
   &--first b {
-    background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
+    background: $color-adv-item-firstb;
   }
 
   @include vp-1199 {
     width: 320px;
+    min-height: 72px;
     border: none;
   }
 
   @include vp-767 {
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 41px;
+    }
   }
 }
 
@@ -125,6 +133,8 @@
 
   @include vp-767 {
     align-items: center;
+    margin: 0;
+    margin-bottom: 15px;
   }
 }
 
@@ -138,7 +148,7 @@
   min-height: 307px;
   background-color: $color-spec;
   color: $color-default-white;
-  padding: 54px 12px 58px;
+  padding: 54px 30px 58px;
   margin-top: 2px;
   margin-bottom: 5px;
 
@@ -156,6 +166,10 @@
     @include vp-1199 {
       font-size: 22px;
       line-height: 33px;
+    }
+
+    @include vp-767 {
+      line-height: 22px;
     }
   }
 
@@ -175,7 +189,8 @@
 
   @include vp-767 {
     width: 100%;
-    padding: 50px 0;
+    padding: 38px 52px 43px;
+    margin-bottom: 45px;
   }
 }
 
@@ -190,7 +205,7 @@
   font-weight: 700;
   font-size: 71px;
   line-height: 53px;
-  background: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
+  background: $color-adv-item-b;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 5px;
@@ -200,12 +215,20 @@
     line-height: 50px;
     margin-bottom: 1px;
   }
+
+  @include vp-767 {
+    margin-bottom: 7px;
+  }
 }
 
 .advantages__item span {
   font-size: 14px;
   line-height: 21px;
   color: $color-adv-span;
+
+  @include vp-767 {
+    line-height: 10px;
+  }
 }
 
 .advantages__item dl {
@@ -215,6 +238,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 46px;
   }
 }
 
@@ -229,6 +253,12 @@
     line-height: 30px;
     margin-top: -2px;
     margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 7px;
   }
 }
 

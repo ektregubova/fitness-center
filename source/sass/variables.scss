@@ -20,27 +20,31 @@ $color-text-price:                  #e8e8e8;
 $color-text-skill:                  #b6bdcc;
 $color-adv-span:                    #2e35ac;
 $color-spec:                        #1c3374;
-$color-stock-gen:                   #ed0233;
+$color-stock-super:                 #ed0233;
 $color-bg-dark:                     #030a1a;
 $color-contacts:                    #74819c;
-$color-btn:                         #d10a42;
+$color-red-grad:                    #d10a42;
+$color-adv-item:                    rgba(209, 10, 66, 0.2);
+$color-coaches:                     rgba(16, 38, 84, 0.89);
+$color-btn-swiper:                  #afafaf;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $background-gradient-desk:          conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $background-gradient-tab:           conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 $background-gradient-mob:           conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
-
+$color-adv-item-firstb:             linear-gradient(127.61deg, $color-red-grad 0%, #0041ca 45.58%);
+$color-adv-item-b:                  linear-gradient(142.51deg, $color-red-grad 0%, #0041ca 87.33%);
+$color-grad-border:                 linear-gradient(148.82deg, $color-red-grad 0.85%, #00359f 100%);
+$color-sub-link:                    linear-gradient(97.05deg, $color-stock-super 17.6%, #003eb7 95.31%);
 // Typography
 // ---------------------------------
 
-// переменная используемая в html для подключения скейлинга
 $fz-default:                        16px;
 
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-roboto:                         "Roboto Condensed", "Arial", sans-serif;
-$ff-bebas:                          "Bebas Neue", "Arial", sans-serif;
 $ff-alumni:                         "Alumni Sans", "Arial", sans-serif;
 
 // Animation
@@ -49,7 +53,6 @@ $ff-alumni:                         "Alumni Sans", "Arial", sans-serif;
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
 
-// если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $trans-600:                         0.6s $tf-default;

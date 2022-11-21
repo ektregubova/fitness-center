@@ -1,14 +1,13 @@
 .gym {
-  padding-bottom: 120px;
-  padding-top: 120px;
+  padding: 120px 0;
 
   @include vp-1199 {
-    padding-bottom: 100px;
-    padding-top: 100px;
+    padding: 100px 0;
   }
 
   @include vp-767 {
-    padding: 70px 0;
+    padding-bottom: 70px;
+    padding-top: 64px;
   }
 }
 
@@ -25,25 +24,6 @@
 
   @include vp-767 {
     padding: 0;
-  }
-}
-
-.gym__content {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  max-width: 355px;
-  padding-top: 51px;
-
-  @include vp-1199 {
-    padding: 0;
-    max-width: 504px;
-    padding-bottom: 38px;
-    align-items: center;
-  }
-
-  @include vp-767 {
-    padding: 0 15px;
   }
 }
 
@@ -66,11 +46,33 @@
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    margin-left: 0;
   }
 }
 
-.gym h3 {
+.gym__content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 355px;
+  padding-top: 51px;
+
+  @include vp-1199 {
+    padding: 0;
+    max-width: 504px;
+    padding-bottom: 38px;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
+    padding: 0 15px;
+  }
+}
+
+
+.gym__content span {
   font-size: 18px;
   line-height: 27px;
   margin: 0;
@@ -81,11 +83,11 @@
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 }
 
-.gym p {
+.gym__content p {
   font-weight: 300;
   margin: 0;
   margin-bottom: 6px;
@@ -95,7 +97,8 @@
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    text-align: left;
+    margin-bottom: 33px;
   }
 }
 
@@ -106,6 +109,10 @@
     p:last-child {
       display: none;
     }
+  }
+
+  @include vp-767 {
+    padding-right: 30px;
   }
 }
 
@@ -132,6 +139,10 @@
   @include vp-1199 {
     height: 345px;
   }
+
+  @include vp-767 {
+    height: 313px;
+  }
 }
 
 .gym__img {
@@ -140,19 +151,11 @@
   object-fit: cover;
 
   @include vp-1199 {
-    ////object-fit: cover;
-    ////position: absolute;
-    ////top: 50%;
-    ////left: 50%;
-    ////transform: translate(-50%, -50%);
-    ////width: 678px;
-    ////height: 345px;
-    ////object-fit: fill;
-    //clip-path: inset(0 0 6% 10%);
+    object-position: top;
   }
 
   @include vp-767 {
-    max-height: 313px;
+    object-position: right;
   }
 }
 
@@ -162,6 +165,7 @@
   margin-top: -113px;
   margin-left: -63px;
   position: relative;
+  background-color: $color-bg;
 
   @include vp-1199 {
     width: 266px;
@@ -171,6 +175,7 @@
   }
 
   @include vp-767 {
+    width: 100%;
     margin-top: 40px;
   }
 }
@@ -187,6 +192,13 @@
 
   &--hidden {
     display: none;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
