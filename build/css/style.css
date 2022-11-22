@@ -1283,9 +1283,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1240px;
+  max-width: 1260px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 .header {
@@ -1961,7 +1961,6 @@ button,
 
 .super-games__image {
   max-width: 660px;
-  width: 660px;
   background-color: #1c3374;
 }
 
@@ -2145,11 +2144,11 @@ button,
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  right: -35px;
+  right: -56px;
 }
 
 .coaches__button--prev {
-  left: -35px;
+  left: -57px;
 }
 
 .coaches__button.focus-visible:focus {
@@ -3311,7 +3310,7 @@ button,
   }
 
   .super-games__content {
-    padding: 48px 38px 50px 44px;
+    padding: 48px 44px 50px 44px;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -3365,12 +3364,7 @@ button,
   }
 
   .super-games__image {
-    max-width: 386px;
-    width: 386px;
-  }
-
-  .super-games__img {
-    width: 386px;
+    min-width: 386px;
   }
 
   .coaches {
@@ -3880,10 +3874,6 @@ button,
     max-width: 100%;
     width: 100%;
     height: 292px;
-  }
-
-  .super-games__img {
-    width: 100%;
   }
 
   .coaches {

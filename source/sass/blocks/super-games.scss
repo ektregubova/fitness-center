@@ -33,7 +33,7 @@
   padding-right: 62px;
 
   @include vp-1199 {
-    padding: 48px 38px 50px 44px;
+    padding: 48px 44px 50px 44px;
     justify-content: flex-start;
   }
 
@@ -202,12 +202,10 @@
 
 .super-games__image {
   max-width: 660px;
-  width: 660px;
   background-color: $color-spec;
 
   @include vp-1199 {
-    max-width: 386px;
-    width: 386px;
+    min-width: 386px;
   }
 
   @include vp-767 {
@@ -222,11 +220,11 @@
   width: 100%;
   height: 100%;
 
-  @include vp-1199 {
-    width: 386px;
-  }
+  //@include vp-1199 {
+  //  width: 386px;
+  //}
 
-  @include vp-767 {
-    width: 100%;
-  }
+  //@include vp-767 {
+  //  width: 100%;
+  //}
 }
