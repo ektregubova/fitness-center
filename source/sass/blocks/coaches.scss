@@ -11,6 +11,19 @@
   }
 }
 
+.coaches__container {
+  position: relative;
+
+  @include vp-1199 {
+    max-width: 566px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+  }
+}
+
 .coaches h2 {
   font-family: $ff-alumni;
   color: $color-text;
@@ -35,8 +48,7 @@
   }
 }
 
-.coaches__wrapper {
-  position: relative;
+.coaches__swiper {
   height: 294px;
 
   @include vp-1199 {
@@ -53,7 +65,7 @@
 .coaches__slide {
   position: relative;
   cursor: pointer;
-  width: 260px;
+  max-width: 260px;
   height: 100%;
   background-color: $color-coaches;
 
@@ -78,11 +90,11 @@
   }
 
   @include vp-1199 {
-    width: 268px;
+    max-width: 268px;
   }
 
   @include vp-767 {
-    width: 226px;
+    max-width: 226px;
   }
 }
 
@@ -107,6 +119,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   position: absolute;
   top: 0;
   left: 0;
@@ -117,7 +130,7 @@
   padding-top: 52px;
   padding-left: 54px;
   padding-bottom: 52px;
-  padding-right: 39px;
+  padding-right: 10px;
   transition: opacity $trans-default;
   overflow: auto;
 
@@ -131,7 +144,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-right: 15px;
+  margin-left: 2px;
 
   @include vp-1199 {
     margin-right: 22px;
@@ -185,28 +198,24 @@
 
 .coaches__button {
   position: absolute;
-  top: 44%;
   z-index: 1;
   display: block;
   cursor: pointer;
   border: none;
-  width: 18px;
+  width: 30px;
   height: 34px;
   padding: 0;
   background-color: transparent;
 
-  svg {
-    fill: none;
-    stroke: $color-btn-swiper;
-  }
-
   &--next {
     transform: rotate(180deg);
-    right: -56px;
+    right: -5.5%;
+    top: 44%;
   }
 
   &--prev {
-    left: -57px;
+    left: -5.5%;
+    top: 45%;
   }
 
   @include hover-focus {
@@ -219,29 +228,60 @@
 
   @include active {
     svg {
-      stroke: $color-red-grad;
+      stroke: $color-bg-dark;
     }
   }
 
   @include vp-1199 {
+    top: 44%;
+
     &--prev {
-      left: -56px;
+      left: -11%;
     }
 
     &--next {
-      right: -56px;
+      right: -11%;
     }
   }
 
   @include vp-767 {
+    height: 70px;
+
     &--next {
-      right: -36px;
+      top: 37%;
+      right: -3%;
       transform: scale(0.6) rotate(180deg);
     }
 
     &--prev {
-      left: -36px;
+      top: 38%;
+      left: -3%;
       transform: scale(0.6);
     }
   }
+}
+
+.coaches__button svg {
+  fill: none;
+  stroke: $color-btn-swiper;
+}
+
+.coaches__wrapper[data-swiper].is-nojs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.coaches__button[data-swiper-button].is-nojs {
+  display: none;
 }

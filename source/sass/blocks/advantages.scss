@@ -138,69 +138,6 @@
   }
 }
 
-.advantages__item-special {
-  grid-column: 2/3;
-  grid-row: 1/3;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 240px;
-  min-height: 307px;
-  background-color: $color-spec;
-  color: $color-default-white;
-  padding: 54px 30px 58px;
-  margin-top: 2px;
-  margin-bottom: 5px;
-
-  & b {
-    font-size: 74px;
-    font-weight: 700;
-    line-height: 74px;
-  }
-
-  & span {
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 39px;
-
-    @include vp-1199 {
-      font-size: 22px;
-      line-height: 33px;
-    }
-
-    @include vp-767 {
-      line-height: 22px;
-    }
-  }
-
-  & p {
-    margin: 0;
-    text-align: center;
-  }
-
-  @include vp-1199 {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    width: 442px;
-    min-height: 239px;
-    margin: 0 auto;
-    padding: 33px 115px 37px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-    padding: 38px 52px 43px;
-    margin-bottom: 45px;
-  }
-}
-
-.advantages__info-special {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 .advantages__item b {
   font-weight: 700;
   font-size: 71px;
@@ -270,4 +207,67 @@
   @include vp-767 {
     text-align: center;
   }
+}
+
+.advantages__item-special {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 240px;
+  min-height: 307px;
+  background-color: $color-spec;
+  color: $color-default-white;
+  padding: 54px 30px 58px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+
+  @include vp-1199 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 442px;
+    min-height: 239px;
+    margin: 0 auto;
+    padding: 33px 115px 37px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 38px 52px 43px;
+    margin-bottom: 45px;
+  }
+}
+
+.advantages__info-special {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantages__item-special b {
+  font-size: 74px;
+  font-weight: 700;
+  line-height: 74px;
+}
+
+.advantages__item-special span {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  @include vp-767 {
+    line-height: 22px;
+  }
+}
+
+.advantages__item-special p {
+  margin: 0;
+  text-align: center;
 }

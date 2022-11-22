@@ -2,11 +2,28 @@ import Swiper from '../vendor/swiper-bundle.min';
 
 const coachSwiper = document.querySelector('.coaches__swiper');
 const reviewsSwiper = document.querySelector('.reviews__swiper');
+const swiperButtons = document.querySelectorAll('[data-swiper-button]');
+const swiperWrappers = document.querySelectorAll('[data-swiper]');
+
+function removeSwiperClass() {
+  if (!swiperButtons || !swiperWrappers) {
+    return;
+  }
+
+  swiperButtons.forEach((button) => {
+    button.classList.remove('is-nojs');
+  });
+
+  swiperWrappers.forEach((elem) => {
+    elem.classList.remove('is-nojs');
+  });
+}
 
 function addReviewsSwiper() {
   if (!reviewsSwiper) {
     return;
   }
+
   const swiper = new Swiper(reviewsSwiper, {
 
     navigation: {
@@ -68,4 +85,4 @@ function addCoachSwiper() {
   swiper.enable();
 }
 
-export {addCoachSwiper, addReviewsSwiper};
+export {addCoachSwiper, addReviewsSwiper, removeSwiperClass};

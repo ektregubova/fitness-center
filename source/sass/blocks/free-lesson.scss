@@ -45,6 +45,7 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   row-gap: 29px;
+  position: relative;
 
   @include vp-1199 {
     column-gap: 60px;
@@ -116,5 +117,18 @@
 
   @include active {
     color: $color-bg-dark;
+  }
+}
+
+.free-lesson__form span {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  color: $color-red-grad;
+  font-size: 14px;
+  margin: 0;
+
+  @include vp-767 {
+    font-size: 12px;
   }
 }

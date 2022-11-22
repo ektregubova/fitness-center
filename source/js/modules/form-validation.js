@@ -3,6 +3,8 @@ const formButton = document.querySelector('[data-form-button]');
 const validFormArray = [];
 
 let formArray;
+let errorMessage = document.createElement('span');
+errorMessage.textContent = 'Введите корректные данные и заполните пустые поля';
 
 if (form) {
   formArray = Array.from(form);
@@ -35,6 +37,7 @@ function inputCheck(elem) {
   const reg = new RegExp(inputReg);
   if (reg.test(inputValue)) {
     elem.setAttribute('is-valid', '1');
+    errorMessage.remove();
   } else {
     elem.setAttribute('is-valid', '0');
   }
@@ -57,7 +60,10 @@ function buttonHandler(evt) {
   });
 
   if (!isAllValid) {
+    form.insertAdjacentElement('beforeend', errorMessage);
     evt.preventDefault();
+  } else {
+    errorMessage.remove();
   }
 }
 
