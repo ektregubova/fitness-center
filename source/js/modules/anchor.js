@@ -9,11 +9,14 @@ function onLinkMove() {
     evt.preventDefault();
 
     const blockID = anchor.getAttribute('href').substring(1);
+    const block = document.getElementById(blockID);
 
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    if (block) {
+      block.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   });
 }
 

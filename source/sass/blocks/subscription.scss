@@ -5,40 +5,31 @@
 
   @include vp-1199 {
     padding: 100px 0;
+
+    &::after {
+      content: url("../img/discs-tab.png");
+      right: 60px;
+      bottom: -24px;
+    }
   }
 
   @include vp-767 {
     padding-bottom: 70px;
     padding-top: 64px;
-  }
-}
 
-.subscription__image {
-  position: absolute;
-  right: 0;
-  bottom: -149px;
-  width: 385px;
-  height: 492px;
-  z-index: 0;
-
-  @include vp-1199 {
-    width: 347px;
-    height: 446px;
-    bottom: -126px;
+    &::after {
+      display: none;
+    }
   }
 
-  @include vp-767 {
-    display: none;
-  }
-}
 
-.subscription__img {
-  width: 100%;
-  height: 100%;
-  object-position: 98px;
-
-  @include vp-1199 {
-    object-position: 0;
+  &::after {
+    position: absolute;
+    content: url("../img/discs-desk.png");
+    bottom: 0;
+    right: 0;
+    width: 287px;
+    height: 343px;
   }
 }
 

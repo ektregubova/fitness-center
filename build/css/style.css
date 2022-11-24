@@ -1448,11 +1448,20 @@ button,
   color: #102654;
 }
 
+.intro__image {
+  position: relative;
+  width: 500px;
+  height: 556px;
+  padding-top: 47.25%;
+}
+
 .intro__img {
-  -o-object-fit: cover;
-  object-fit: cover;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .gym {
@@ -1460,13 +1469,12 @@ button,
 }
 
 .gym .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding-left: 110px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 355px 1fr;
+  grid-template-columns: 355px 1fr;
+  gap: 85px;
+  padding-left: 125px;
 }
 
 .gym h2 {
@@ -1513,11 +1521,17 @@ button,
 
 .gym__media-img {
   width: 100%;
+  height: 401px;
+  max-height: 401px;
+  position: relative;
+  padding-top: 56.25%;
 }
 
 .gym__img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  inset: 0;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1528,22 +1542,28 @@ button,
   margin-top: -113px;
   margin-left: -63px;
   position: relative;
+  padding-top: 30%;
   background-color: #f8f9fc;
-}
-
-.gym__iframe {
-  width: 100%;
-  height: 100%;
 }
 
 .gym__video-poster {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .gym__video-poster--hidden {
   display: none;
+}
+
+.gym__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .gym__button {
@@ -1585,20 +1605,13 @@ button,
   position: relative;
 }
 
-.subscription__image {
+.subscription::after {
   position: absolute;
+  content: url("../img/discs-desk.png");
+  bottom: 0;
   right: 0;
-  bottom: -149px;
-  width: 385px;
-  height: 492px;
-  z-index: 0;
-}
-
-.subscription__img {
-  width: 100%;
-  height: 100%;
-  -o-object-position: 98px;
-  object-position: 98px;
+  width: 287px;
+  height: 343px;
 }
 
 .subscription .container {
@@ -1807,8 +1820,8 @@ button,
 .super-games .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr auto;
-  grid-template-columns: 1fr auto;
+  -ms-grid-columns: 500px 1fr;
+  grid-template-columns: 500px 1fr;
 }
 
 .super-games__content {
@@ -1961,7 +1974,10 @@ button,
 
 .super-games__image {
   max-width: 660px;
+  width: 100%;
   background-color: #1c3374;
+  padding-top: 75%;
+  position: relative;
 }
 
 .super-games__img {
@@ -1969,6 +1985,8 @@ button,
   object-fit: cover;
   width: 100%;
   height: 100%;
+  position: absolute;
+  inset: 0;
 }
 
 .coaches {
@@ -2402,8 +2420,8 @@ button,
   color: #ffffff;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 280px 1fr;
+  grid-template-columns: 280px 1fr;
   min-width: 560px;
 }
 
@@ -2421,6 +2439,8 @@ button,
 
 .stocks__general-image {
   background-color: #103aae;
+  position: relative;
+  padding-top: 20%;
 }
 
 .stocks__general-img {
@@ -2428,8 +2448,8 @@ button,
   object-fit: cover;
   width: 100%;
   height: 100%;
-  -o-object-position: -45px;
-  object-position: -45px;
+  position: absolute;
+  inset: 0;
 }
 
 .stocks__general h3 {
@@ -2541,8 +2561,6 @@ button,
   position: relative;
   max-width: 560px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .reviews h2 {
@@ -2558,23 +2576,23 @@ button,
 }
 
 .reviews__slide {
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   background-color: #1c3374;
   color: #ffffff;
   margin: 0;
   padding: 62px 62px 57px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 80px 1fr;
-  grid-template-columns: 80px 1fr;
-  -ms-grid-rows: 20px 1fr;
-  grid-template-rows: 20px 1fr;
-  -webkit-column-gap: 28px;
-  -moz-column-gap: 28px;
-  column-gap: 28px;
-  row-gap: 15px;
+}
+
+.reviews__slide-info {
+  position: relative;
+  padding-top: 35px;
+  padding-left: 108px;
 }
 
 .reviews__slide cite {
+  position: absolute;
+  top: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -2585,15 +2603,12 @@ button,
 .reviews__slide p {
   line-height: 22px;
   margin: 0;
-  grid-column: 2/-1;
-  grid-row: 2/-1;
 }
 
 .reviews__slide-image {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  grid-row: 1/-1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .reviews__slide-img {
@@ -2918,7 +2933,6 @@ button,
 }
 
 .footer__logo {
-  width: 88px;
   height: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3216,7 +3230,7 @@ button,
   }
 
   .intro__image {
-    max-width: 324px;
+    width: 50%;
     height: 390px;
   }
 
@@ -3225,6 +3239,9 @@ button,
   }
 
   .gym .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -3232,6 +3249,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    gap: 37px;
     padding: 0 45px;
   }
 
@@ -3245,7 +3263,6 @@ button,
   .gym__content {
     padding: 0;
     max-width: 504px;
-    padding-bottom: 37px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -3283,7 +3300,9 @@ button,
   }
 
   .gym__media-img {
+    max-height: 100%;
     height: 345px;
+    padding-top: 50%;
   }
 
   .gym__img {
@@ -3292,10 +3311,13 @@ button,
   }
 
   .gym__video {
-    width: 266px;
+    min-width: 266px;
+    width: 39%;
+    max-height: 100%;
     height: 167px;
+    padding-top: 22%;
+    margin: 0 auto;
     margin-top: -84px;
-    margin-left: 0;
   }
 
   .gym__button {
@@ -3307,15 +3329,10 @@ button,
     padding: 100px 0;
   }
 
-  .subscription__image {
-    width: 347px;
-    height: 446px;
-    bottom: -126px;
-  }
-
-  .subscription__img {
-    -o-object-position: 0;
-    object-position: 0;
+  .subscription::after {
+    content: url("../img/discs-tab.png");
+    right: 60px;
+    bottom: -24px;
   }
 
   .subscription h2 {
@@ -3346,6 +3363,11 @@ button,
 
   .super-games {
     padding: 100px 0;
+  }
+
+  .super-games .container {
+    -ms-grid-columns: 43% 1fr;
+    grid-template-columns: 43% 1fr;
   }
 
   .super-games__content {
@@ -3403,7 +3425,7 @@ button,
   }
 
   .super-games__image {
-    max-width: 386px;
+    min-height: 292px;
   }
 
   .coaches {
@@ -3554,19 +3576,14 @@ button,
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    -ms-grid-columns: 1fr auto;
-    grid-template-columns: 1fr auto;
   }
 
   .stocks__general-image {
     min-width: 399px;
-    max-height: 462px;
+    min-height: 462px;
+    height: 100%;
     max-width: 100%;
-  }
-
-  .stocks__general-img {
-    -o-object-position: 0;
-    object-position: 0;
+    padding-top: 110%;
   }
 
   .reviews {
@@ -3782,6 +3799,7 @@ button,
 
   .gym .container {
     padding: 0;
+    gap: 0;
   }
 
   .gym h2 {
@@ -3811,12 +3829,9 @@ button,
     padding-right: 30px;
   }
 
-  .gym__media {
-    max-height: 520px;
-  }
-
   .gym__media-img {
     height: 313px;
+    margin-bottom: 40px;
   }
 
   .gym__img {
@@ -3826,16 +3841,14 @@ button,
 
   .gym__video {
     width: 100%;
-    margin-top: 40px;
+    height: 100%;
+    margin: 0;
+    padding-top: 52.25%;
   }
 
   .gym__video-poster {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: top;
-    object-position: top;
   }
 
   .subscription {
@@ -3843,7 +3856,7 @@ button,
     padding-top: 64px;
   }
 
-  .subscription__image {
+  .subscription::after {
     display: none;
   }
 
@@ -3934,8 +3947,6 @@ button,
 
   .super-games__image {
     max-width: 100%;
-    width: 100%;
-    height: 292px;
   }
 
   .coaches {
@@ -4107,13 +4118,8 @@ button,
 
   .stocks__general {
     min-width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .stocks__general-content {
@@ -4128,14 +4134,14 @@ button,
   }
 
   .stocks__general-image {
-    min-width: 290px;
-    max-height: 299px;
+    min-width: 100%;
+    min-height: 299px;
+    padding-top: 100%;
   }
 
   .stocks__general-img {
-    max-height: 299px;
-    -o-object-position: top;
-    object-position: top;
+    -o-object-fit: fill;
+    object-fit: fill;
   }
 
   .stocks__general span {
@@ -4174,37 +4180,23 @@ button,
   }
 
   .reviews__slide {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 40px;
-    padding-bottom: 36px;
-    -ms-grid-columns: 68px 1fr;
-    grid-template-columns: 68px 1fr;
-    -ms-grid-rows: minmax(68px, auto) 1fr;
-    grid-template-rows: minmax(68px, auto) 1fr;
-    -webkit-column-gap: 31px;
-    -moz-column-gap: 31px;
-    column-gap: 31px;
+    padding: 40px 25px 35px;
+  }
+
+  .reviews__slide-info {
+    padding-left: 0;
+    padding-top: 84px;
   }
 
   .reviews__slide cite {
+    width: 62px;
+    right: 16px;
     line-height: 26px;
     margin-top: 8px;
   }
 
   .reviews__slide p {
     text-align: center;
-    grid-column: 1/-1;
-    grid-row: 2/-1;
-  }
-
-  .reviews__slide-image {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
   }
 
   .reviews__slide-img {

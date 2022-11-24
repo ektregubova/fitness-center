@@ -14,7 +14,11 @@
 
 .super-games .container {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 500px 1fr;
+
+  @include vp-1199 {
+    grid-template-columns: 43% 1fr;
+  }
 
   @include vp-767 {
     grid-template-columns: 1fr;
@@ -202,16 +206,17 @@
 
 .super-games__image {
   max-width: 660px;
+  width: 100%;
   background-color: $color-spec;
+  padding-top: 75%;
+  position: relative;
 
   @include vp-1199 {
-    max-width: 386px;
+    min-height: 292px;
   }
 
   @include vp-767 {
     max-width: 100%;
-    width: 100%;
-    height: 292px;
   }
 }
 
@@ -219,4 +224,6 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  position: absolute;
+  inset: 0;
 }

@@ -12,18 +12,22 @@
 }
 
 .gym .container {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 110px;
+  display: grid;
+  grid-template-columns: 355px 1fr;
+  gap: 85px;
+  padding-left: 125px;
 
   @include vp-1199 {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 37px;
     padding: 0 45px;
   }
 
   @include vp-767 {
     padding: 0;
+    gap: 0;
   }
 }
 
@@ -61,7 +65,6 @@
   @include vp-1199 {
     padding: 0;
     max-width: 504px;
-    padding-bottom: 37px;
     align-items: center;
   }
 
@@ -127,27 +130,32 @@
     max-width: 100%;
     width: 100%;
   }
-
-  @include vp-767 {
-    max-height: 520px;
-  }
 }
 
 .gym__media-img {
   width: 100%;
+  height: 401px;
+  max-height: 401px;
+  position: relative;
+  padding-top: 56.25%;
 
   @include vp-1199 {
+    max-height: 100%;
     height: 345px;
+    padding-top: 50%;
   }
 
   @include vp-767 {
     height: 313px;
+    margin-bottom: 40px;
   }
 }
 
 .gym__img {
+  position: absolute;
   width: 100%;
   height: 100%;
+  inset: 0;
   object-fit: cover;
 
   @include vp-1199 {
@@ -165,30 +173,33 @@
   margin-top: -113px;
   margin-left: -63px;
   position: relative;
+  padding-top: 30%;
   background-color: $color-bg;
 
   @include vp-1199 {
-    width: 266px;
+    min-width: 266px;
+    width: 39%;
+    max-height: 100%;
     height: 167px;
+    padding-top: 22%;
+    margin: 0 auto;
     margin-top: -84px;
-    margin-left: 0;
   }
 
   @include vp-767 {
     width: 100%;
-    margin-top: 40px;
+    height: 100%;
+    margin: 0;
+    padding-top: 52.25%;
   }
-}
-
-.gym__iframe {
-  width: 100%;
-  height: 100%;
 }
 
 .gym__video-poster {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   &--hidden {
     display: none;
@@ -197,9 +208,14 @@
   @include vp-767 {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: top;
   }
+}
+
+.gym__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .gym__button {
