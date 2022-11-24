@@ -2010,7 +2010,7 @@ button,
 }
 
 .coaches__swiper {
-  height: 294px;
+  min-height: 294px;
 }
 
 .coaches__slide {
@@ -3965,7 +3965,7 @@ button,
 
   .coaches__swiper {
     width: 226px;
-    height: 274px;
+    min-height: 274px;
   }
 
   .coaches__slide {
