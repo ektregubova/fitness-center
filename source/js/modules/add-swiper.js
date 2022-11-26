@@ -5,7 +5,7 @@ const reviewsSwiper = document.querySelector('.reviews__swiper');
 const swiperButtons = document.querySelectorAll('[data-swiper-button]');
 const swiperWrappers = document.querySelectorAll('[data-swiper]');
 
-function removeSwiperClass() {
+const removeSwiperClass = () => {
   if (!swiperButtons || !swiperWrappers) {
     return;
   }
@@ -17,9 +17,9 @@ function removeSwiperClass() {
   swiperWrappers.forEach((elem) => {
     elem.classList.remove('is-nojs');
   });
-}
+};
 
-function addReviewsSwiper() {
+const addReviewsSwiper = () => {
   if (!reviewsSwiper) {
     return;
   }
@@ -41,9 +41,9 @@ function addReviewsSwiper() {
     },
   });
   swiper.enable();
-}
+};
 
-function addCoachSwiper() {
+const addCoachSwiper = () => {
   if (!coachSwiper) {
     return;
   }
@@ -83,6 +83,6 @@ function addCoachSwiper() {
     watchSlidesProgress: true,
   });
   swiper.enable();
-}
+};
 
 export {addCoachSwiper, addReviewsSwiper, removeSwiperClass};

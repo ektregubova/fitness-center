@@ -131,6 +131,15 @@
   }
 }
 
+.subscription__nav-button[data-sub-button].is-nojs {
+  color: rgba($color: $color-text, $alpha : 0.5);
+}
+
+.subscription__nav-button[data-sub-button].is-nojs::before {
+  display: none;
+}
+
+
 .subscription__subcontent[data-sub-tab].is-active {
   display: block;
 }

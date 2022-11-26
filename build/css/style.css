@@ -1689,6 +1689,14 @@ button,
   background-color: #d10a42;
 }
 
+.subscription__nav-button[data-sub-button].is-nojs {
+  color: rgba(16, 38, 84, 0.5);
+}
+
+.subscription__nav-button[data-sub-button].is-nojs::before {
+  display: none;
+}
+
 .subscription__subcontent[data-sub-tab].is-active {
   display: block;
 }
@@ -1976,7 +1984,7 @@ button,
   max-width: 660px;
   width: 100%;
   background-color: #1c3374;
-  padding-top: 75%;
+  padding-top: 75.7%;
   position: relative;
 }
 
@@ -2017,7 +2025,7 @@ button,
   position: relative;
   cursor: pointer;
   max-width: 260px;
-  height: 100%;
+  height: 294px;
   background-color: rgba(16, 38, 84, 0.89);
 }
 
@@ -3426,6 +3434,7 @@ button,
 
   .super-games__image {
     min-height: 292px;
+    padding-top: 75%;
   }
 
   .coaches {
@@ -3451,6 +3460,14 @@ button,
 
   .coaches__slide {
     max-width: 268px;
+  }
+
+  .coaches__slide[data-coach].is-open .coaches__slide-info {
+    opacity: 1;
+  }
+
+  .coaches__slide[data-coach].is-open h3 {
+    opacity: 0;
   }
 
   .coaches__name {
@@ -3970,10 +3987,14 @@ button,
 
   .coaches__slide {
     max-width: 226px;
+    height: 274px;
   }
 
   .coaches__slide-info {
     padding: 42px 33px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .coaches__name {

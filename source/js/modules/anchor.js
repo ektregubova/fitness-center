@@ -1,6 +1,6 @@
 const anchor = document.querySelector('a[data-anchor]');
 
-function onLinkMove() {
+const onLinkMove = () => {
   if (!anchor) {
     return;
   }
@@ -18,6 +18,6 @@ function onLinkMove() {
       });
     }
   });
-}
+};
 
 export {onLinkMove};

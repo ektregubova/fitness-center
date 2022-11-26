@@ -208,11 +208,12 @@
   max-width: 660px;
   width: 100%;
   background-color: $color-spec;
-  padding-top: 75%;
+  padding-top: 75.7%;
   position: relative;
 
   @include vp-1199 {
     min-height: 292px;
+    padding-top: 75%;
   }
 
   @include vp-767 {

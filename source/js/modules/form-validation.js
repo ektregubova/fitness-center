@@ -19,7 +19,7 @@ if (formArray) {
   });
 }
 
-function checkEmptyInputs() {
+const checkEmptyInputs = () => {
   if (!formArray) {
     return;
   }
@@ -29,9 +29,9 @@ function checkEmptyInputs() {
       input.setAttribute('is-valid', '0');
     }
   });
-}
+};
 
-function inputCheck(elem) {
+const inputCheck = (elem) => {
   const inputValue = elem.value;
   const inputReg = elem.getAttribute('data-reg');
   const reg = new RegExp(inputReg);
@@ -41,15 +41,15 @@ function inputCheck(elem) {
   } else {
     elem.setAttribute('is-valid', '0');
   }
-}
+};
 
-function inputHandler({target}) {
+const inputHandler = ({target}) => {
   if (target.hasAttribute('data-reg')) {
     inputCheck(target);
   }
-}
+};
 
-function buttonHandler(evt) {
+const buttonHandler = (evt) => {
   checkEmptyInputs();
   const allValid = [];
   validFormArray.forEach((elem) => {
@@ -65,15 +65,15 @@ function buttonHandler(evt) {
   } else {
     errorMessage.remove();
   }
-}
+};
 
-function validateForm() {
+const validateForm = () => {
   if (!form || !formButton) {
     return;
   }
 
   form.addEventListener('input', inputHandler);
   formButton.addEventListener('click', buttonHandler);
-}
+};
 
 export {validateForm};
