@@ -1599,6 +1599,10 @@ button,
   border-radius: 50%;
 }
 
+.gym__button[data-video-button].is-nojs {
+  display: none;
+}
+
 .subscription {
   background-color: #f8f9fc;
   padding: 120px 0;

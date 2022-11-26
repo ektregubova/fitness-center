@@ -2,6 +2,10 @@ const video = document.querySelector('[data-video]');
 const videoButton = video ? video.querySelector('[data-video-button]') : null;
 const videoPoster = video ? video.querySelector('[data-video-poster]') : null;
 
+if (videoButton) {
+  videoButton.classList.remove('is-nojs');
+}
+
 const generateURL = () => {
   if (!video) {
     return '';

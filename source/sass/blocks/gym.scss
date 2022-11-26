@@ -253,3 +253,7 @@
     border-radius: 50%;
   }
 }
+
+.gym__button[data-video-button].is-nojs {
+  display: none;
+}
