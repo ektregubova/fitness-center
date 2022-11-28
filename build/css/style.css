@@ -2033,20 +2033,47 @@ button,
   background-color: rgba(16, 38, 84, 0.89);
 }
 
+.coaches__slide.focus-visible:focus {
+  -webkit-box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+}
+
 .coaches__slide.focus-visible:focus .coaches__slide-info {
   opacity: 1;
+}
+
+.coaches__slide.focus-visible:focus .coaches__slide-img {
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .coaches__slide.focus-visible:focus h3 {
   opacity: 0;
 }
 
+.coaches__slide:focus-within {
+  -webkit-box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+}
+
 .coaches__slide:focus-within .coaches__slide-info {
   opacity: 1;
 }
 
+.coaches__slide:focus-within .coaches__slide-img {
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+  -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 .coaches__slide:focus-within h3 {
   opacity: 0;
+}
+
+.coaches__slide[data-coach].is-open {
+  -webkit-box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
 }
 
 .coaches__slide h3 {
@@ -3470,6 +3497,12 @@ button,
     opacity: 1;
   }
 
+  .coaches__slide[data-coach].is-open .coaches__slide-img {
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
   .coaches__slide[data-coach].is-open h3 {
     opacity: 0;
   }
@@ -4436,8 +4469,19 @@ button,
     outline: none;
   }
 
+  .coaches__slide:hover:not(.focus-visible) {
+    -webkit-box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+    box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+  }
+
   .coaches__slide:hover:not(.focus-visible) .coaches__slide-info {
     opacity: 1;
+  }
+
+  .coaches__slide:hover:not(.focus-visible) .coaches__slide-img {
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
   .coaches__slide:hover:not(.focus-visible) h3 {

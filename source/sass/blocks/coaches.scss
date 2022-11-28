@@ -70,8 +70,14 @@
   background-color: $color-coaches;
 
   @include hover-focus {
+    box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+
     .coaches__slide-info {
       opacity: 1;
+    }
+
+    .coaches__slide-img {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 
     h3 {
@@ -80,8 +86,14 @@
   }
 
   &:focus-within {
+    box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+
     .coaches__slide-info {
       opacity: 1;
+    }
+
+    .coaches__slide-img {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 
     h3 {
@@ -100,9 +112,15 @@
 }
 
 .coaches__slide[data-coach].is-open {
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+
   @include vp-1199 {
     .coaches__slide-info {
       opacity: 1;
+    }
+
+    .coaches__slide-img {
+      transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 
     h3 {
