@@ -1307,7 +1307,7 @@ button,
 
 .header__logo {
   padding-top: 10px;
-  margin-right: 10px;
+  margin-right: 40px;
 }
 
 .header__tel {
@@ -1345,9 +1345,10 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 265px;
 }
 
 .intro h1 {
@@ -1375,7 +1376,6 @@ button,
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: 67px;
   margin-top: 120px;
 }
 
@@ -1450,7 +1450,9 @@ button,
 
 .intro__image {
   position: relative;
+  max-width: 53%;
   width: 500px;
+  max-height: 556px;
   height: 556px;
   padding-top: 47.25%;
 }
@@ -2478,17 +2480,10 @@ button,
 
 .stocks__general-image {
   background-color: #103aae;
-  position: relative;
-  padding-top: 20%;
-}
-
-.stocks__general-img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  inset: 0;
+  background-image: -webkit-image-set(url("../img/content/stock.webp") 1x, url("../img/content/stock.jpg") 1x);
+  background-image: image-set(url("../img/content/stock.webp") 1x, url("../img/content/stock.jpg") 1x);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .stocks__general h3 {
@@ -2847,9 +2842,9 @@ button,
   grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: (1fr)[2];
   grid-template-rows: repeat(2, 1fr);
-  -webkit-column-gap: 110px;
-  -moz-column-gap: 110px;
-  column-gap: 110px;
+  -webkit-column-gap: 90px;
+  -moz-column-gap: 90px;
+  column-gap: 90px;
   row-gap: 30px;
   position: relative;
 }
@@ -2890,15 +2885,16 @@ button,
   flex-direction: column;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.contacts__content--address,
+.contacts__content--schedule {
   margin-left: 4px;
 }
 
-.contacts__content--tel {
-  margin-left: 8px;
-}
-
+.contacts__content--tel,
 .contacts__content--mail {
-  margin-left: 8px;
+  margin-left: 19px;
 }
 
 .contacts__content p {
@@ -3225,9 +3221,7 @@ button,
   }
 
   .intro .container {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    padding-right: 45px;
   }
 
   .intro h1 {
@@ -3269,8 +3263,10 @@ button,
   }
 
   .intro__image {
-    width: 50%;
+    max-width: 100%;
+    width: 100%;
     height: 390px;
+    padding-top: 56%;
   }
 
   .gym {
@@ -3633,11 +3629,8 @@ button,
   }
 
   .stocks__general-image {
-    min-width: 399px;
-    min-height: 462px;
-    height: 100%;
-    max-width: 100%;
-    padding-top: 110%;
+    background-image: -webkit-image-set(url("../img/content/stock-tablet.webp") 1x, url("../img/content/stock-tablet.jpg") 1x);
+    background-image: image-set(url("../img/content/stock-tablet.webp") 1x, url("../img/content/stock-tablet.jpg") 1x);
   }
 
   .reviews {
@@ -3712,16 +3705,9 @@ button,
     margin-bottom: 32px;
   }
 
-  .contacts__content {
+  .contacts__content--address,
+  .contacts__content--schedule {
     margin-left: 0;
-  }
-
-  .contacts__content--tel {
-    margin-left: 18px;
-  }
-
-  .contacts__content--mail {
-    margin-left: 18px;
   }
 
   .contacts__content p {
@@ -3770,6 +3756,13 @@ button,
   .footer__social-list {
     margin-right: -6px;
     margin-top: 3px;
+  }
+}
+
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+  .stocks__general-image {
+    background-image: -webkit-image-set(url("../img/content/stock-tablet@2x.webp") 2x, url("../img/content/stock-tablet@2x.jpg") 2x);
+    background-image: image-set(url("../img/content/stock-tablet@2x.webp") 2x, url("../img/content/stock-tablet@2x.jpg") 2x);
   }
 }
 
@@ -3889,8 +3882,8 @@ button,
   }
 
   .gym__img {
-    -o-object-position: right;
-    object-position: right;
+    -o-object-position: 88%;
+    object-position: 88%;
   }
 
   .gym__video {
@@ -3903,6 +3896,8 @@ button,
   .gym__video-poster {
     width: 100%;
     height: 100%;
+    -o-object-position: top;
+    object-position: top;
   }
 
   .subscription {
@@ -4176,8 +4171,13 @@ button,
 
   .stocks__general {
     min-width: 100%;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .stocks__general-content {
@@ -4192,14 +4192,9 @@ button,
   }
 
   .stocks__general-image {
-    min-width: 100%;
     min-height: 299px;
-    padding-top: 100%;
-  }
-
-  .stocks__general-img {
-    -o-object-fit: fill;
-    object-fit: fill;
+    background-image: -webkit-image-set(url("../img/content/stock-mobile.webp") 1x, url("../img/content/stock-mobile.jpg") 1x);
+    background-image: image-set(url("../img/content/stock-mobile.webp") 1x, url("../img/content/stock-mobile.jpg") 1x);
   }
 
   .stocks__general span {
@@ -4228,7 +4223,8 @@ button,
   }
 
   .reviews__container {
-    width: 226px;
+    max-width: 100%;
+    padding: 0 32px;
   }
 
   .reviews h2 {
@@ -4265,19 +4261,18 @@ button,
 
   .reviews__button {
     height: 70px;
+    top: 40%;
   }
 
   .reviews__button--next {
-    top: 39%;
-    right: -19%;
+    right: -3%;
     -webkit-transform: scale(0.6) rotate(180deg);
     -ms-transform: scale(0.6) rotate(180deg);
     transform: scale(0.6) rotate(180deg);
   }
 
   .reviews__button--prev {
-    top: 40%;
-    left: -18%;
+    left: -3%;
     -webkit-transform: scale(0.6);
     -ms-transform: scale(0.6);
     transform: scale(0.6);
@@ -4426,6 +4421,13 @@ button,
   }
 }
 
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .stocks__general-image {
+    background-image: -webkit-image-set(url("../img/content/stock-mobile@2x.webp") 2x, url("../img/content/stock-mobile@2x.jpg") 2x);
+    background-image: image-set(url("../img/content/stock-mobile@2x.webp") 2x, url("../img/content/stock-mobile@2x.jpg") 2x);
+  }
+}
+
 @media (hover: hover) {
   .header__tel:hover:not(.focus-visible) {
     -webkit-text-decoration: underline #102654;
@@ -4538,5 +4540,12 @@ button,
   .footer__social-link:hover:not(.focus-visible) {
     outline: 1px solid #ffffff;
     outline-offset: 1px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .stocks__general-image {
+    background-image: -webkit-image-set(url("../img/content/stock@2x.webp") 2x, url("../img/content/stock@2x.jpg") 2x);
+    background-image: image-set(url("../img/content/stock@2x.webp") 2x, url("../img/content/stock@2x.jpg") 2x);
   }
 }

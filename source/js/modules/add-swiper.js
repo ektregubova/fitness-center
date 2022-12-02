@@ -34,6 +34,7 @@ const addReviewsSwiper = () => {
     slidesPerView: 1,
     watchOverflow: true,
     loop: false,
+    autoHeight: true,
 
     keyboard: {
       enabled: true,

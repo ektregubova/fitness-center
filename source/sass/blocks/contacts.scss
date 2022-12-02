@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  column-gap: 110px;
+  column-gap: 90px;
   row-gap: 30px;
   position: relative;
 
@@ -80,25 +80,21 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 4px;
 
-  &--tel {
-    margin-left: 8px;
+  &--address,
+  &--schedule {
+    margin-left: 4px;
   }
 
+  &--tel,
   &--mail {
-    margin-left: 8px;
+    margin-left: 19px;
   }
 
   @include vp-1199 {
-    margin-left: 0;
-
-    &--tel {
-      margin-left: 18px;
-    }
-
-    &--mail {
-      margin-left: 18px;
+    &--address,
+    &--schedule {
+      margin-left: 0;
     }
   }
 
