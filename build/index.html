@@ -293,7 +293,7 @@
             </button>
             <div class="coaches__swiper swiper">
               <div class="coaches__wrapper swiper-wrapper is-nojs" data-swiper>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Анна Павлова</h3>
                   <picture>
                     <source type="image/webp" srcset="img/content/photo-anna.webp, img/content/photo-anna@2x.webp 2x">
@@ -313,7 +313,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Алексей Лавров</h3>
                   <picture>
                     <source type="image/webp" srcset="img/content/photo-alex.webp, img/content/photo-alex@2x.webp 2x">
@@ -333,7 +333,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Александр Пашков</h3>
                   <picture>
                     <source type="image/webp"
@@ -354,7 +354,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Мария Кетова</h3>
                   <picture>
                     <source type="image/webp" srcset="img/content/photo-mary.webp, img/content/photo-mary@2x.webp 2x">
@@ -374,7 +374,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Анна Павлова</h3>
                   <picture>
                     <source type="image/webp" srcset="img/content/photo-anna.webp, img/content/photo-anna@2x.webp 2x">
@@ -394,7 +394,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Алексей Лавров</h3>
                   <picture>
                     <source type="image/webp" srcset="img/content/photo-alex.webp, img/content/photo-alex@2x.webp 2x">
@@ -414,7 +414,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Александр Пашков</h3>
                   <picture>
                     <source type="image/webp"
@@ -435,7 +435,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="coaches__slide swiper-slide" data-coach>
+                <div class="coaches__slide swiper-slide" data-coach tabindex="0">
                   <h3>Мария Кетова</h3>
                   <picture>
                     <source type="image/webp" srcset="img/content/photo-mary.webp, img/content/photo-mary@2x.webp 2x">
@@ -639,21 +639,25 @@
           <div class="contacts-form__item contacts">
             <h2>Контакты</h2>
             <div class="contacts__wrapper">
-              <div class="contacts__content contacts__content--address">
-                <p>Адрес:</p>
-                <address>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</address>
+              <div class="contacts__column">
+                <div class="contacts__content contacts__content--address">
+                  <p>Адрес:</p>
+                  <address>г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</address>
+                </div>
+                <div class="contacts__content contacts__content--schedule">
+                  <p>График работы:</p>
+                  <span>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</span>
+                </div>
               </div>
-              <div class="contacts__content contacts__content--tel">
-                <p>Телефон:</p>
-                <a href="tel:+88005555555">8-800-555-55-55</a>
-              </div>
-              <div class="contacts__content contacts__content--schedule">
-                <p>График работы:</p>
-                <span>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</span>
-              </div>
-              <div class="contacts__content contacts__content--mail">
-                <p>Email:</p>
-                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              <div class="contacts__column">
+                <div class="contacts__content contacts__content--tel">
+                  <p>Телефон:</p>
+                  <a href="tel:+88005555555">8-800-555-55-55</a>
+                </div>
+                <div class="contacts__content contacts__content--mail">
+                  <p>Email:</p>
+                  <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </div>
               </div>
             </div>
           </div>

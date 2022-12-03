@@ -29,12 +29,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 237px;
 
   @include vp-1199 {
     width: 81px;
     height: 25px;
-    margin-right: 33px;
   }
 
   @include vp-767 {
@@ -43,18 +41,21 @@
 }
 
 .footer__nav-list {
+  width: 835px;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   @include vp-1199 {
     margin-top: 2px;
+    width: 563px;
   }
 
   @include vp-767 {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 33px;
@@ -67,8 +68,16 @@
 .footer__nav-item {
   margin-right: 40px;
 
+  &--logo {
+    margin-right: auto;
+  }
+
   @include vp-1199 {
     margin-right: 30px;
+
+    &--logo {
+      margin-right: auto;
+    }
   }
 
   @include vp-767 {
