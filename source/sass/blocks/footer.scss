@@ -36,25 +36,28 @@
   }
 
   @include vp-767 {
-    width: 67px;
+    display: none;
   }
 }
 
 .footer__nav-list {
-  width: 835px;
+  max-width: 430px;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  column-gap: 40px;
+  margin-left: 11px;
 
   @include vp-1199 {
     margin-top: 2px;
-    width: 563px;
+    max-width: 390px;
+    column-gap: 30px;
   }
 
   @include vp-767 {
+    max-width: 100%;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -62,28 +65,21 @@
     row-gap: 15px;
     margin-bottom: 32px;
     margin-top: 0;
+    margin-left: 0;
+    align-items: center;
   }
 }
 
 .footer__nav-item {
-  margin-right: 40px;
-
   &--logo {
-    margin-right: auto;
-  }
-
-  @include vp-1199 {
-    margin-right: 30px;
-
-    &--logo {
-      margin-right: auto;
-    }
+    display: none;
   }
 
   @include vp-767 {
-    margin: 0;
-
     &--logo {
+      display: block;
+      width: 68px;
+      height: 15px;
       order: -4;
     }
 

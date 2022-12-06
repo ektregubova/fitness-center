@@ -2298,6 +2298,7 @@ button,
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
+  margin-left: auto;
 }
 
 .advantages__item--first b {
@@ -2633,7 +2634,7 @@ button,
 
 .reviews__button {
   position: absolute;
-  top: 43%;
+  top: 103px;
   z-index: 1;
   display: block;
   cursor: pointer;
@@ -2970,7 +2971,7 @@ button,
 }
 
 .footer__nav-list {
-  width: 835px;
+  max-width: 430px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2979,17 +2980,14 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.footer__nav-item {
-  margin-right: 40px;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  margin-left: 11px;
 }
 
 .footer__nav-item--logo {
-  margin-right: auto;
+  display: none;
 }
 
 .footer__nav-link {
@@ -3256,9 +3254,8 @@ button,
   }
 
   .intro__image {
-    max-width: 100%;
     width: 100%;
-    height: 390px;
+    height: 100%;
     padding-top: 56%;
   }
 
@@ -3733,15 +3730,10 @@ button,
 
   .footer__nav-list {
     margin-top: 2px;
-    width: 563px;
-  }
-
-  .footer__nav-item {
-    margin-right: 30px;
-  }
-
-  .footer__nav-item--logo {
-    margin-right: auto;
+    max-width: 390px;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
   }
 
   .footer__social-list {
@@ -4235,9 +4227,9 @@ button,
 
   .reviews__slide cite {
     width: 62px;
-    right: 16px;
     line-height: 26px;
     margin-top: 8px;
+    left: 100px;
   }
 
   .reviews__slide p {
@@ -4252,7 +4244,7 @@ button,
 
   .reviews__button {
     height: 70px;
-    top: 40%;
+    top: 133px;
   }
 
   .reviews__button--next {
@@ -4302,7 +4294,7 @@ button,
   }
 
   .contacts {
-    padding: 64px 15px 63px;
+    padding: 64px 15px 70px;
   }
 
   .contacts__wrapper::before {
@@ -4336,10 +4328,11 @@ button,
   }
 
   .footer__logo {
-    width: 67px;
+    display: none;
   }
 
   .footer__nav-list {
+    max-width: 100%;
     width: 100%;
     display: -ms-grid;
     display: grid;
@@ -4351,13 +4344,16 @@ button,
     row-gap: 15px;
     margin-bottom: 32px;
     margin-top: 0;
-  }
-
-  .footer__nav-item {
-    margin: 0;
+    margin-left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .footer__nav-item--logo {
+    display: block;
+    width: 68px;
+    height: 15px;
     -webkit-box-ordinal-group: -3;
     -ms-flex-order: -4;
     order: -4;

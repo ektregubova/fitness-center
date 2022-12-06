@@ -12,12 +12,6 @@
   }
 }
 
-//.reviews .container {
-//  @include vp-767 {
-//    padding: 0;
-//  }
-//}
-
 .reviews__container {
   position: relative;
   max-width: 560px;
@@ -96,9 +90,9 @@
 
   @include vp-767 {
     width: 62px;
-    right: 16px;
     line-height: 26px;
     margin-top: 8px;
+    left: 100px;
   }
 }
 
@@ -129,7 +123,7 @@
 
 .reviews__button {
   position: absolute;
-  top: 43%;
+  top: 103px;
   z-index: 1;
   display: block;
   cursor: pointer;
@@ -168,7 +162,7 @@
 
   @include vp-767 {
     height: 70px;
-    top: 40%;
+    top: 133px;
 
     &--next {
       right: -3%;
